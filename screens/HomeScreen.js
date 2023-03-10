@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Image, TouchableHighlight, FlatList, ImageBackground } from "react-native"
-import { Card, ListItem } from "react-native-elements";
+import { View, Text, StyleSheet, TouchableHighlight, FlatList, ImageBackground, Button } from "react-native"
+import { Image, Card, ListItem } from "react-native-elements";
 import HomeGame from '../assets/img/homegame.jpg'
 import Background from '../assets/img/background.jpg'
 import DnD from '../assets/img/dnd.jpg'
@@ -30,7 +30,7 @@ const data = [
 ]
 
 const HomeScreen = ({ navigation }) => {
-    
+
     return (
         <ImageBackground source={Background} resizeMode="cover" style={styles.image}>
             <View>
@@ -39,8 +39,9 @@ const HomeScreen = ({ navigation }) => {
                     data={data}
                     style={{ paddingTop: 40 }}
                     renderItem={({ item }) => (
-                        <View 
-                        style={{ flexDirection: 'row'}}
+                        <View
+                            style={{ flexDirection: 'row' }}
+                            onPress={() => navigation.navigate(`${item.site}`)}
                         >
                             <Image
                                 source={item.image}
@@ -49,13 +50,16 @@ const HomeScreen = ({ navigation }) => {
                                     height: 150,
                                     resizeMode: 'contain'
                                 }}
-                                onPress={() => navigation.navigate(item.site)}
+                                onPress={() => navigation.navigate(`${item.site}`)}
+                                // onPressIn={() = item.image.style={styles.press}}
+
                             />
-                            <Text style={styles.text}>{item.text}</Text>
+                            <Text 
+                            onPress={() => navigation.navigate(`${item.site}`)}
+                            style={styles.text}>{item.text}</Text>
                         </View>
                     )}
                 />
-
             </View>
         </ImageBackground>
     )
@@ -67,10 +71,10 @@ const styles = StyleSheet.create({
     },
     text: {
         flex: 1,
-        marginBottom: 35, 
-        backgroundColor: 'tan', 
-        width: 245, 
-        height: 150, 
+        marginBottom: 35,
+        backgroundColor: 'tan',
+        width: 245,
+        height: 150,
         textAlign: 'center',
         textAlignVertical: 'center',
         fontSize: 24,
@@ -78,6 +82,9 @@ const styles = StyleSheet.create({
     },
     image: {
         height: '100%'
+    },
+    press: {
+        opacity: .80
     }
 })
 

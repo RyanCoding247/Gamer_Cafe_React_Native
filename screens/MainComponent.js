@@ -9,6 +9,9 @@ import GamesScreen from "./GamesScreen";
 import EventsScreen from "./EventsScreen";
 import RoomsScreen from "./RoomsScreen";
 import StoreScreen from "./StoreScreen";
+import { fetchMenu } from "../features/menu/menuSlice";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 
 const Drawer = createDrawerNavigator();
@@ -162,6 +165,13 @@ const EventsNavigator = () => {
 
 
 const Main = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchMenu());
+    }, [dispatch])
+
     return (
         <View
             style={{
