@@ -4,14 +4,21 @@ import { Platform, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import MenuScreen from "./MenuScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Icon } from 'react-native-elements';
+import { Icon, Avatar } from 'react-native-elements';
 import GamesScreen from "./GamesScreen";
 import EventsScreen from "./EventsScreen";
 import RoomsScreen from "./RoomsScreen";
 import StoreScreen from "./StoreScreen";
 import { fetchMenu } from "../features/menu/menuSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { fetchEvents } from "../features/events/eventsSlice";
+import { fetchGames } from "../features/games/gamesSlice";
+import { fetchStore } from "../features/store/storeSlice";
+import { fetchRooms } from "../features/rooms/roomsSlice";
+import EventInfoScreen from "../features/events/EventInfoScreen";
+import RoomInfoScreen from "../features/rooms/RoomInfoScreen";
+import { baseUrl } from "../shared/baseUrl";
 
 
 const Drawer = createDrawerNavigator();
@@ -34,10 +41,10 @@ const HomeNavigator = () => {
                 options={({ navigation }) => ({
                     title: 'Home',
                     headerLeft: () => (
-                        <Icon
-                            name='home'
-                            type='font-awesome'
-                            iconStyle={styles.stackIcon}
+                        <Avatar
+                            title='home'
+                            source={{ uri: baseUrl + 'images/gamerlogo.jpeg' }}
+                            rounded
                             onPress={() => navigation.toggleDrawer()}
                         />
                     )
@@ -93,7 +100,10 @@ const GamesNavigator = () => {
 }
 
 const RoomsNavigator = () => {
+
     const Stack = createStackNavigator();
+    const rooms = useSelector((state) => state.rooms.roomsArray)
+
     return (
         <Stack.Navigator
             screenOptions={screenOptions}>
@@ -111,6 +121,17 @@ const RoomsNavigator = () => {
                     )
                 })}
             />
+            {rooms.map((item, idx) => {
+                return (
+                    <Stack.Screen
+                        name={item.name}
+                        key={idx}
+                        component={RoomInfoScreen}
+                        options={({ route }) => ({
+                            title: route.params.item.name
+                        })}
+                    />)
+            })}
         </Stack.Navigator>
     )
 }
@@ -139,9 +160,13 @@ const StoreNavigator = () => {
 }
 
 const EventsNavigator = () => {
+
+    const events = useSelector((state) => state.events);
+
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
+            initialRouteName="Events"
             screenOptions={screenOptions}>
             <Stack.Screen
                 name='Events'
@@ -157,6 +182,18 @@ const EventsNavigator = () => {
                     )
                 })}
             />
+            {events.eventsArray.map((item, idx) => {
+                return (
+                    <Stack.Screen
+                        name={item.name}
+                        key={idx}
+                        component={EventInfoScreen}
+                        options={({ route }) => ({
+                            title: route.params.item.name
+                        })}
+                    />)
+            })}
+
         </Stack.Navigator>
     )
 }
@@ -170,6 +207,10 @@ const Main = () => {
 
     useEffect(() => {
         dispatch(fetchMenu());
+        dispatch(fetchEvents());
+        dispatch(fetchGames());
+        dispatch(fetchRooms());
+        dispatch(fetchStore());
     }, [dispatch])
 
     return (

@@ -5,7 +5,6 @@ import Background from '../assets/img/background.jpg'
 import DnD from '../assets/img/dnd.jpg'
 import Dining from '../assets/img/restaurant.jpg'
 import GamerTitle from "../components/Header";
-import { useState } from "react";
 
 
 const data = [
@@ -51,14 +50,15 @@ const HomeScreen = ({ navigation }) => {
                                     resizeMode: 'contain'
                                 }}
                                 onPress={() => navigation.navigate(`${item.site}`)}
-                                // onPressIn={() = item.image.style={styles.press}}
-
                             />
-                            <Text 
-                            onPress={() => navigation.navigate(`${item.site}`)}
-                            style={styles.text}>{item.text}</Text>
+                            <Text
+                                onPress={() => navigation.navigate(`${item.site}`)}
+                                style={styles.text}>
+                                {item.text}
+                            </Text>
                         </View>
                     )}
+                    contentContainerStyle={{ marginTop: 50 }}
                 />
             </View>
         </ImageBackground>

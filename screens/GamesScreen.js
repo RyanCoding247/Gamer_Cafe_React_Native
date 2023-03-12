@@ -1,73 +1,72 @@
 import { useState } from 'react';
-import { StyleSheet, View, ImageBackground, Image } from 'react-native';
+import { StyleSheet, View, ImageBackground, Button, Text, ScrollView } from 'react-native';
 // import { Image } from 'react-native-elements';
-import { Table, Row, Rows } from "react-native-table-component";
 import { baseUrl } from '../shared/baseUrl';
 import imageThing from '../assets/img/injustice.jpg'
+import { Card, ListItem, Avatar } from 'react-native-elements';
+import { useSelector } from 'react-redux';
 
-
-const tableData = {
-    tableHead: ['Crypto Name', 'Value', 'Mkt Cap'],
-    tableData: [
-        ['Bitcoin', '$44,331', '$839,702,328,904'],
-        ['Ethereum', '$3000.9', '$359,080,563,225'],
-        ['Tether', '$1', '$79,470,820,738'],
-        ['BNB', '$413.44', '$69,446,144,361'],
-        ['USD Coin', '$1', '$53,633,260,549'],
-    ],
-};
 
 const GamesScreen = () => {
-    const [data, setData] = useState(tableData);
+
+    const [page, setPage] = useState(1);
+    const [gameImage, setGameImage] = useState('images/games/dkjr.jpg');
+    const [gameName, setGameName] = useState("Donkey Kong Jr.")
+
+    const games = useSelector((state) => state.games.gamesArray);
+    const page1 = games.filter(e => e.page === 1);
+    const page2 = games.filter(e => e.page === 2);
+    const page3 = games.filter(e => e.page === 3);
+
+    const gamesPage = page === 2 ? page2 : page === 3 ? page3 : page1;
 
 
     return (
         <View>
-            <ImageBackground source={{ uri: baseUrl + 'images/matrixbg1.png' }} resizeMode="cover" style={styles.image}>
-                <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80, top: 80 }}
+            <ImageBackground source={{ uri: baseUrl + 'images/matrixbg.jpeg' }} resizeMode="stretch" style={styles.image}>
+                <Text style={styles.title}>Games</Text>
+                <Text style={{color: 'red', fontSize: 30, marginBottom: -25, paddingTop: 10, textAlign: 'center' }}>{gameName}</Text>
+                <Card
+                    containerStyle={{ backgroundColor: 'transparent', borderWidth: 0, alignSelf: 'center' }}
+                    wrapperStyle={{ backgroundColor: 'transparent' }}
+                >
+                    <Card.Image
+                        source={{ uri: baseUrl + gameImage }}
+                        style={{ borderWidth: 2, borderColor: 'green', width: 250, height: 250 }} 
                     />
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80, top: 80 }}
-                    />
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80, top: 80 }}
-                    />
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80, top: 80 }}
-                    />
-                </View>
-                <View style={[styles.container, {marginBottom: -90}]}>
-                    <Table borderStyle={{ borderWidth: 4, borderColor: 'teal' }}>
-                        <Row
-                            data={data.tableHead}
-                            style={styles.head}
-                            textStyle={styles.headText} />
-                        <Rows data={data.tableData} textStyle={styles.text} style={styles.head} />
-                    </Table>
-                </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom: 100 }}>
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80 }}
-                    />
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80 }}
-                    />
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80 }}
-                    />
-                    <Image
-                        source={{ uri: baseUrl + 'images/injustice.jpg' }}
-                        style={{ width: 80, height: 80}}
-                    />
+                </Card>
+                <View style={[styles.container, { marginBottom: 10 }]}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginBottom: 20 }}>
+                        <Button title='Page 1' color="red" onPress={() => setPage(1)} />
+                        <Button title='Page 2' color="red" onPress={() => setPage(2)} />
+                        <Button title='Page 2' color="red" onPress={() => setPage(3)} />
+                    </View>
+                    <View style={{ height: '80%' }}>
+                        <Text style={{ color: 'red', textAlign: 'center', fontSize: 24, paddingBottom: 5 }}>List of Games Page {page}</Text>
+                        <ScrollView
+                            style={{
+                                borderWidth: 1, borderColor: 'rgba(57, 255, 20, 0.5)',
+                                borderRadius: 5
+                            }}
+                        >
+                            {gamesPage.map(
+                                (item, idx) => (
+                                    <ListItem
+                                        key={idx}
+                                        onPress={() => {
+                                            setGameImage(item.image);
+                                            setGameName(item.name);
+                                        }}
+                                        containerStyle={{ borderRadius: 2, borderBottomWidth: 2, backgroundColor: 'transparent' }}
+                                    >
+                                        <Avatar source={{ uri: baseUrl + item.image }} size={50} containerStyle={{borderWidth: 1, borderColor: 'rgba(57, 255, 20, 0.5)'}} />
+                                        <ListItem.Content>
+                                            <Text style={{ color: 'red', alignSelf: 'center' }}>{item.name}</Text>
+                                        </ListItem.Content>
+                                    </ListItem>
+                                ))}
+                        </ScrollView>
+                    </View>
                 </View>
             </ImageBackground>
         </View>
@@ -99,7 +98,30 @@ const styles = StyleSheet.create({
     },
     image: {
         height: '100%'
+    },
+    title: {
+        width: '40%',
+        height: '8%',
+        borderRadius: 40,
+        borderWidth: 2,
+        borderColor: 'rgba(57, 255, 20, 0.5)',
+        fontSize: 40,
+        color: '#39FF14',
+        textAlign: 'center',
+        alignSelf: 'center',
+        textAlignVertical: 'center',
+        marginTop: 20,
+        textShadow: 2,
+        backgroundColor: 'rgba(0, 0, 0, 1)',
+        textShadowColor: 'green',
+        textShadowOffset: {
+            width: -2,
+            height: 1
+        },
+        textShadowRadius: 10,
+        fontFamily: 'BubblegumSans_400Regular'
     }
+
 });
 
 export default GamesScreen;
