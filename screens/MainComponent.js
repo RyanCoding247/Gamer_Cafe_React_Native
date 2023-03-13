@@ -136,28 +136,28 @@ const RoomsNavigator = () => {
     )
 }
 
-const StoreNavigator = () => {
-    const Stack = createStackNavigator();
-    return (
-        <Stack.Navigator
-            screenOptions={screenOptions}>
-            <Stack.Screen
-                name='Store'
-                component={StoreScreen}
-                options={({ navigation }) => ({
-                    headerLeft: () => (
-                        <Icon
-                            name='shopping-basket'
-                            type='font-awesome'
-                            iconStyle={styles.stackIcon}
-                            onPress={() => navigation.toggleDrawer()}
-                        />
-                    )
-                })}
-            />
-        </Stack.Navigator>
-    )
-}
+// const StoreNavigator = () => {
+//     const Stack = createStackNavigator();
+//     return (
+//         <Stack.Navigator
+//             screenOptions={screenOptions}>
+//             <Stack.Screen
+//                 name='Store'
+//                 component={StoreScreen}
+//                 options={({ navigation }) => ({
+//                     headerLeft: () => (
+//                         <Icon
+//                             name='shopping-basket'
+//                             type='font-awesome'
+//                             iconStyle={styles.stackIcon}
+//                             onPress={() => navigation.toggleDrawer()}
+//                         />
+//                     )
+//                 })}
+//             />
+//         </Stack.Navigator>
+//     )
+// }
 
 const EventsNavigator = () => {
 
@@ -305,7 +305,7 @@ const Main = () => {
                         )
                     }}
                 />
-                <Drawer.Screen
+                {/* <Drawer.Screen
                     name='Store'
                     component={StoreNavigator}
                     options={{
@@ -320,7 +320,7 @@ const Main = () => {
                             />
                         )
                     }}
-                />
+                /> */}
             </Drawer.Navigator>
         </View>
 

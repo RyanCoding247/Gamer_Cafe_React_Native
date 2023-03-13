@@ -10,7 +10,6 @@ const RoomsScreen = ({ navigation }) => {
     return (
         <View>
             <ImageBackground source={{ uri: baseUrl + 'images/roomsbg.JPEG' }} resizeMode="stretch" style={{ height: "100%" }}>
-                <Text>Rooms</Text>
                 <ScrollView>
                     {rooms.map((item, idx) => (
                         <Card

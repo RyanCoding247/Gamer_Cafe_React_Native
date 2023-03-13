@@ -24,9 +24,6 @@ const CarouselCards = ({ navigation }) => {
                 onSnapToItem={(index) => {setIndex(index) }}
                 useScrollView={true}
                 navigation={navigation}
-                loop={true}
-                autoplay={true}
-                autoplayInterval={10000}
                 inactiveSlideOpacity={0}
             />
             <Pagination

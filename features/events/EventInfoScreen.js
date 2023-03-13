@@ -2,6 +2,7 @@ import { StyleSheet, View, ImageBackground, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 import { baseUrl } from '../../shared/baseUrl';
 import { useFonts, BubblegumSans_400Regular } from "@expo-google-fonts/bubblegum-sans";
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 
@@ -15,11 +16,11 @@ const EventInfoScreen = ({ route }) => {
 
     return (
         <ImageBackground source={{ uri: baseUrl + 'images/eventsbg.jpg' }} resizeMode="cover" style={{ height: '100%' }}>
-            <View>
+            <ScrollView style={{marginBottom: 10}}>
                 <Text style={styles.title}
-                    >{item.name}</Text>
+                >{item.name}</Text>
                 <Card
-                    containerStyle={{ backgroundColor: 'black', borderColor: 'transparent', borderRadius: 10, marginTop: 50}}
+                    containerStyle={{ backgroundColor: 'black', borderColor: 'transparent', borderRadius: 10, marginTop: 50 }}
                 >
                     <Card.Image
                         style={{ padding: 0, height: 300, width: '100%', borderRadius: 10 }}
@@ -30,9 +31,9 @@ const EventInfoScreen = ({ route }) => {
                     <Text style={{ marginBottom: 10, marginTop: 10, backgroundColor: 'black', color: 'white', fontSize: 16 }}>
                         {item.summary}
                     </Text>
-                    <Text style={{color: 'white', fontSize: 14}}>Event Date:          {item.date}</Text>
+                    <Text style={{ color: 'white', fontSize: 14 }}>Event Date:          {item.date}</Text>
                 </Card>
-            </View>
+            </ScrollView>
         </ImageBackground>
     );
 };

@@ -47,7 +47,7 @@ const HomeScreen = ({ navigation }) => {
                                 style={{
                                     width: 150,
                                     height: 150,
-                                    resizeMode: 'contain'
+                                    resizeMode: 'cover'
                                 }}
                                 onPress={() => navigation.navigate(`${item.site}`)}
                             />
