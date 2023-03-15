@@ -1,0 +1,952 @@
+{
+  "menu": [
+    {
+      "name": "Mexican Coke",
+      "price": "1.75",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/coke.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Root Beer",
+      "price": "1.50",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/rootbeer.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Dr. Pepper",
+      "price": "1.50",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/drpepper.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Ginger Beer",
+      "price": "1.50",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/gingerbeer.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Diet Coke",
+      "price": "1.25",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/dietcoke.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Lemonade",
+      "price": "1.00",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/lemonade.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Green Tea",
+      "price": "2.00",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/greentea.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Chai Tea",
+      "price": "2.25",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/chaitea.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Black Tea",
+      "price": "2.00",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/blacktea.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Herbal Tea",
+      "price": "2.50",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/herbaltea.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Matcha Tea",
+      "price": "3.00",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/matchatea.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Iced Tea",
+      "price": "2.00",
+      "ingredients": "",
+      "type": "drink",
+      "image": "images/food/icedtea.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Hot Dog",
+      "price": "5.00",
+      "ingredients": "beef frank, buttered bun, your choice of condiments and 2 toppings: onions, relish, sauerkraut, jalapeño",
+      "type": "classic",
+      "image": "images/food/hotdog.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Chili Dog",
+      "price": "7.50",
+      "ingredients": "beef frank, buttered bun, ground beef, tomato sauce, cheddar cheese, honey",
+      "type": "classic",
+      "image": "images/food/chilidog.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Mega Burger",
+      "price": "8.25",
+      "ingredients": "1/3 lb all beef patty on sesame seed bun, topped with lettuce, tomatoes, onion, and American cheese (GF bun optional)",
+      "type": "classic",
+      "image": "images/food/burger.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Cheese Steak of Champions",
+      "price": "10.00",
+      "ingredients": "grilled seasoned Philly beef steak, peppers, onions, mushrooms, provolone, cheddar, served on a 12 in. hoagie",
+      "type": "classic",
+      "image": "images/food/cheesesteak.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Vegan Gyro",
+      "price": "6.75",
+      "ingredients": "gyro with avocado, red roasted peppers, red onions, romaine, tomatoes, olives, hummus, pita",
+      "type": "classic",
+      "image": "images/food/vegangyro.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Giant Corn Dog",
+      "price": "7.50",
+      "ingredients": "1 and 1/2 feet of battered goodness",
+      "type": "classic",
+      "image": "images/food/corndog.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Grilled Cheese Sandwich",
+      "price": "5.00",
+      "ingredients": "buttered Texas Toast bread, cheddar or swiss cheese (GF bread optional)",
+      "type": "classic",
+      "image": "images/food/grilledcheese.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Chicken Fajita Marinade",
+      "price": "7.00",
+      "ingredients": "chicken, soy sauce, brown sugar, sliced bell pepper, chili powder, cumin, mozarella",
+      "type": "texmex",
+      "image": "images/food/chickenfajita.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Nachos Supreme",
+      "price": "8.00",
+      "ingredients": "White American cheese, pepper jack cheese, Monterey Jack cheese, pickled jalapenos, onion, ground beef, garlic, refried beans, tomato, avocado, cilantro, sour cream",
+      "type": "texmex",
+      "image": "images/food/nachos.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Chicken Tomatillo Soup",
+      "price": "6.50",
+      "ingredients": "tomatillos, tomatoes, chicken, sweet red pepper, garbanzo beans, corn, cheddar cheese, cilantro",
+      "type": "texmex",
+      "image": "images/food/chickensoup.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Stuffed Tacos",
+      "price": "7.00",
+      "ingredients": "ground beef or chicken, chili powder, red pepper, guacamole, refried beans, pico de dallo",
+      "type": "texmex",
+      "image": "images/food/taco.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Beef Flautas",
+      "price": "7.00",
+      "ingredients": "corn or flour tortilla, beef, onions, green peppers, oregano, sour cream",
+      "type": "texmex",
+      "image": "images/food/beefflautas.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Sizes: 8 in.       12 in.        16 in.\n           8.00        10.00        12.00",
+      "type": "pizza",
+      "image": "images/food/pizza.png",
+      "ingredients": ""
+    },
+    {
+      "name": "Meats",
+      "price": "1.50 ea.",
+      "ingredients": "pepperoni, canadian bacon, salami, bacon, sausage, italian sausage",
+      "type": "pizza",
+      "image": "images/food/meats.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Fruits and Veggies",
+      "price": "1.00 ea.",
+      "ingredients": "tomatoes, red onions, red or green bell peppers, jalapeños, black olives, pineapple, mushrooms, extra cheese, apple, pear, figs",
+      "type": "pizza",
+      "image": "images/food/fruits.jpg",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Gluten-Free Dough",
+      "price": "0.50",
+      "ingredients": "",
+      "type": "pizza",
+      "image": "images/food/dough.jpg",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item may contain soy."
+    },
+    {
+      "name": "Garden Salad",
+      "price": "6.00",
+      "ingredients": "fresh romaine, carrots, red cabbage, tomatoes, cucumbers, red onions, GF croutons",
+      "type": "salad",
+      "image": "images/food/garden.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Grilled Chicken Caesar Salad",
+      "price": "7.50",
+      "ingredients": "Grilled sliced chicken, fresh romaine lettuce, tomatoes, GF croutons, shaved Parmesan cheese",
+      "type": "salad",
+      "image": "images/food/caesar.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Chef's Salad",
+      "price": "8.50",
+      "ingredients": "fresh Romane, julienne carrots, red cabbage, turkey, ham, sliced hard boiled egg, Mexi fiesta 4 Blend Cheese, tomatoes, cucumbers, red onions, GF croutons",
+      "type": "salad",
+      "image": "images/food/chef.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Dressing Choices",
+      "price": "",
+      "ingredients": "Homemade Ranch, Blue Cheese, Honey Mustard, Caesar, Greek, Oil & Vinegar, Italian (extra dressing 0.50)",
+      "type": "salad",
+      "image": "images/food/dressing.jpg",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Fries",
+      "price": "1.00",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/fries.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Sweet Potato Fries",
+      "price": "1.50",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/sweetfries.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Baked Potato",
+      "price": "2.00",
+      "ingredients": "butter, cheese, sour cream, chives, dill, bacon bits, gravy",
+      "type": "side",
+      "image": "images/food/bakedpotato.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Green Beans",
+      "price": "1.50",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/greenbean.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Rolls",
+      "price": "2.00",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/roll.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Tomato Soup",
+      "price": "2.50",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/tomatosoup.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Mashed Potatoes",
+      "price": "1.50",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/mashed.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Steamed Broccoli",
+      "price": "0.50",
+      "ingredients": "",
+      "type": "side",
+      "image": "images/food/broccoli.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Ice Cream",
+      "price": "1.50",
+      "ingredients": "Vanilla, Chocolate, Strawberry",
+      "type": "dessert",
+      "image": "images/food/icecream.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Apple Pie",
+      "price": "2.50",
+      "ingredients": "Dutch cinnamon apple pie, topped with whipped cream or ice cream (vanilla, chocolate, or strawberry)Vanilla, Chocolate, Strawberry",
+      "type": "dessert",
+      "image": "images/food/applepie.png",
+      "glutenFree": "This food item may contain gluten.",
+      "dairyFree": "This food item may contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    },
+    {
+      "name": "Dark Chocolate Hazelnut Tarts",
+      "price": "3.50",
+      "ingredients": "made with dark chocolate, hazelnut flour, espresso powder, egg white, hazelnut liqueur (optional), vanilla extract, flaky sea salt, topped with whipped cream or ice cream (vanilla, chocolate, or strawberry)",
+      "type": "dessert",
+      "image": "images/food/hazelnut.png",
+      "glutenFree": "This food item does not contain gluten.",
+      "dairyFree": "This food item does not contain dairy.",
+      "soyFree": "This food item does not contain soy."
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "page": 1,
+      "name": "Donkey Kong Jr.",
+      "image": "images/games/dkjr.jpg",
+      "featured": 1.2
+    },
+    {
+      "id": 2,
+      "page": 1,
+      "name": "Mario Kart GP DX",
+      "image": "images/games/mkart.jpg",
+      "featured": 1.2
+    },
+    {
+      "id": 3,
+      "page": 1,
+      "name": "Frogger",
+      "image": "images/games/frogger.jpg",
+      "featured": 1.1
+    },
+    {
+      "id": 4,
+      "page": 1,
+      "name": "Star Wars Battle Pod",
+      "image": "images/games/starwarspod.jpg",
+      "featured": 1.2
+    },
+    {
+      "id": 5,
+      "page": 1,
+      "name": "Air Hockey",
+      "image": "images/games/hockey.png",
+      "featured": 2.2
+    },
+    {
+      "id": 6,
+      "page": 1,
+      "name": "Skeeball",
+      "image": "images/games/skeeball.jpg",
+      "featured": 2.2
+    },
+    {
+      "id": 7,
+      "page": 1,
+      "name": "Ultimate Racer Supreme",
+      "image": "images/games/race.jpg",
+      "featured": 2.2
+    },
+    {
+      "id": 8,
+      "page": 1,
+      "name": "Pac-man",
+      "image": "images/games/pacman.jpg",
+      "featured": 1.1
+    },
+    {
+      "id": 9,
+      "page": 1,
+      "name": "VR Roller Coaster",
+      "image": "images/games/vrcoaster.png",
+      "featured": 2.1
+    },
+    {
+      "id": 10,
+      "page": 1,
+      "name": "VR Golf",
+      "image": "images/games/vrgolf.jpg",
+      "featured": 2.1
+    },
+    {
+      "id": 11,
+      "page": 1,
+      "name": "Street Fighter",
+      "image": "images/games/streetfighter.jpg",
+      "featured": 1.1
+    },
+    {
+      "id": 12,
+      "page": 1,
+      "name": "Injustice",
+      "image": "images/games/injustice.jpg",
+      "featured": 2.1
+    },
+    {
+      "id": 13,
+      "image": "images/games/time.jpg",
+      "page": 1,
+      "name": "Time Crisis 4"
+    },
+    {
+      "id": 14,
+      "image": "images/games/jurassic.jpg",
+      "page": 1,
+      "name": "Jurassic Park"
+    },
+    {
+      "id": 15,
+      "image": "images/games/halo.jpg",
+      "page": 1,
+      "name": "Halo Deluxe"
+    },
+    {
+      "id": 16,
+      "image": "images/games/dead.jpg",
+      "page": 1,
+      "name": "The Walking Dead"
+    },
+    {
+      "id": 17,
+      "image": "images/games/boxing.jpg",
+      "page": 1,
+      "name": "Champion Boxing"
+    },
+    {
+      "id": 18,
+      "image": "images/games/bikes.jpg",
+      "page": 1,
+      "name": "Super Bikes 3"
+    },
+    {
+      "id": 19,
+      "image": "images/games/fun.jpg",
+      "page": 1,
+      "name": "Fun-E-Ball"
+    },
+    {
+      "id": 20,
+      "image": "images/games/tomb.jpg",
+      "page": 1,
+      "name": "Tomb Raider"
+    },
+    {
+      "id": 21,
+      "image": "images/games/xmen.jpg",
+      "page": 1,
+      "name": "X-Men 4"
+    },
+    {
+      "id": 22,
+      "image": "images/games/zombie.jpg",
+      "page": 1,
+      "name": "VR Zombie Killer 5000"
+    },
+    {
+      "id": 23,
+      "image": "images/games/skyrim.jpg",
+      "page": 1,
+      "name": "VR Skyrim Lite"
+    },
+    {
+      "id": 24,
+      "image": "images/games/vrboxing.jpg",
+      "page": 2,
+      "name": "VR World Boxing Champ"
+    },
+    {
+      "id": 25,
+      "image": "images/games/kombat.jpg",
+      "page": 2,
+      "name": "Mortal Kombat"
+    },
+    {
+      "id": 26,
+      "image": "images/games/space.jpg",
+      "page": 2,
+      "name": "Space Invaders"
+    },
+    {
+      "id": 27,
+      "image": "images/games/dk.jpg",
+      "page": 2,
+      "name": "Donkey Kong"
+    },
+    {
+      "id": 28,
+      "image": "images/games/galaga.png",
+      "page": 2,
+      "name": "Galaga"
+    },
+    {
+      "id": 29,
+      "image": "images/games/centipede.png",
+      "page": 2,
+      "name": "Centipede"
+    },
+    {
+      "id": 30,
+      "image": "images/games/defender.png",
+      "page": 2,
+      "name": "Defender"
+    },
+    {
+      "id": 31,
+      "image": "images/games/joust.jpg",
+      "page": 2,
+      "name": "Joust"
+    },
+    {
+      "id": 32,
+      "image": "images/games/qix.png",
+      "page": 2,
+      "name": "Qix"
+    },
+    {
+      "id": 33,
+      "image": "images/games/midway.jpg",
+      "page": 2,
+      "name": "1943: The Battle of Midway"
+    },
+    {
+      "id": 34,
+      "image": "images/games/mspacman.png",
+      "page": 2,
+      "name": "Ms. Pac-Man"
+    },
+    {
+      "id": 35,
+      "image": "images/games/mega.jpg",
+      "page": 2,
+      "name": "Mega Man"
+    },
+    {
+      "id": 36,
+      "image": "images/games/axe.jpg",
+      "page": 2,
+      "name": "Golden Axe"
+    },
+    {
+      "id": 37,
+      "image": "images/games/foos.jpg",
+      "page": 2,
+      "name": "Foosball"
+    },
+    {
+      "id": 38,
+      "image": "images/games/bball.jpg",
+      "page": 2,
+      "name": "NBA Hoops Matrix"
+    },
+    {
+      "id": 39,
+      "image": "images/games/laser.jpg",
+      "page": 2,
+      "name": "Laser Tag"
+    },
+    {
+      "id": 40,
+      "image": "images/games/pong.jpg",
+      "page": 2,
+      "name": "Ping-Pong"
+    },
+    {
+      "id": 41,
+      "image": "images/games/toss.jpg",
+      "page": 2,
+      "name": "Zombie Smasher Ball Toss"
+    },
+    {
+      "id": 42,
+      "image": "images/games/derby.jpg",
+      "page": 2,
+      "name": "Roll A Ball Derby Horse Racing"
+    },
+    {
+      "id": 43,
+      "image": "images/games/blade.jpg",
+      "page": 2,
+      "name": "VR Blade and Sorcery"
+    },
+    {
+      "id": 44,
+      "image": "images/games/fishing.jpg",
+      "page": 2,
+      "name": "VR Fishing Simulator 3000"
+    },
+    {
+      "id": 45,
+      "image": "images/games/guitar.jpg",
+      "page": 2,
+      "name": "Guitar Hero"
+    },
+    {
+      "id": 46,
+      "image": "images/games/ddr4.jpg",
+      "page": 2,
+      "name": "Dance Dance Revolution 4"
+    },
+    {
+      "id": 47,
+      "image": "images/games/grid.jpg",
+      "page": 3,
+      "name": "Race Driver: Grid"
+    },
+    {
+      "id": 48,
+      "image": "images/games/drummer.jpg",
+      "page": 3,
+      "name": "Drummer Hero"
+    },
+    {
+      "id": 49,
+      "image": "images/games/predator.jpg",
+      "page": 3,
+      "name": "Alien Vs. Predator"
+    },
+    {
+      "id": 50,
+      "image": "images/games/tnmt.jpg",
+      "page": 3,
+      "name": "Teenage Mutant Ninja Turtles: Turtles In Time"
+    },
+    {
+      "id": 52,
+      "image": "images/games/soul.png",
+      "page": 3,
+      "name": "Soul Edge"
+    },
+    {
+      "id": 53,
+      "image": "images/games/jam.jpg",
+      "page": 3,
+      "name": "NBA Jam"
+    },
+    {
+      "id": 54,
+      "image": "images/games/house.jpg",
+      "page": 3,
+      "name": "House Of The Dead 2"
+    },
+    {
+      "id": 55,
+      "image": "images/games/taxi.jpg",
+      "page": 3,
+      "name": "Crazy Taxi"
+    },
+    {
+      "id": 56,
+      "image": "images/games/mine.jpg",
+      "page": 3,
+      "name": "Minecraft Dungeons Arcade"
+    },
+    {
+      "id": 57,
+      "image": "images/games/gungeon.jpg",
+      "page": 3,
+      "name": "Enter the Gungeon: House of the Gundead"
+    },
+    {
+      "id": 58,
+      "image": "images/games/elevator.jpg",
+      "page": 3,
+      "name": "Elevator Invasion"
+    },
+    {
+      "id": 59,
+      "image": "images/games/sonic.jpg",
+      "page": 3,
+      "name": "Sonic & Sega All-Stars Racing"
+    },
+    {
+      "id": 60,
+      "image": "images/games/hatchet.jpg",
+      "page": 3,
+      "name": "Hatchet Hero"
+    },
+    {
+      "id": 61,
+      "image": "images/games/mkvr.jpg",
+      "page": 3,
+      "name": "Mario Kart Arcade GP VR"
+    },
+    {
+      "id": 62,
+      "image": "images/games/vader.jpg",
+      "page": 3,
+      "name": "Vader Immortal Lightsaber Dojo"
+    },
+    {
+      "id": 63,
+      "image": "images/games/fighters.jpg",
+      "page": 3,
+      "name": "King Of Fighters 13 Climax"
+    },
+    {
+      "id": 64,
+      "image": "images/games/initiald.jpg",
+      "page": 3,
+      "name": "Initial D Arcade Stage Zero"
+    },
+    {
+      "id": 65,
+      "image": "images/games/marvel.jpg",
+      "page": 3,
+      "name": "Marvel vs. Capcom"
+    },
+    {
+      "id": 66,
+      "image": "images/games/raven.jpg",
+      "page": 3,
+      "name": "Halo: Fireteam Raven"
+    },
+    {
+      "id": 68,
+      "image": "images/games/pirate.jpg",
+      "page": 3,
+      "name": "Space Pirate Trainer"
+    },
+    {
+      "id": 69,
+      "image": "images/games/tekken.jpg",
+      "page": 3,
+      "name": "Tekken 7"
+    },
+    {
+      "id": 70,
+      "image": "images/games/beat.jpg",
+      "page": 3,
+      "name": "Beat Saber"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Tavern Party",
+      "image": "images/dnd.jpg",
+      "alt": "Party in a fantasy tavern",
+      "headline": "Costumes, laughter, and so much more.",
+      "date": "Coming January 15th, 2023",
+      "summary": "Join us for a night of revelry like no other! From open to close, come in your best fantasy cosplay and enjoy all food and drinks at half-off! Additionally, the person cosplay voted as the best will receive an Oculus 7 and the first-edition version of the newest VR D&D: A Thieve's Tale game!",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Dance Tournament",
+      "image": "images/dance.jpg",
+      "alt": "Ninja turtles dancing",
+      "headline": "Time to boogy! Bring your best moves, and prove the 80s never die!",
+      "date": "February 5th, 2023",
+      "summary": "It's a revolution. A Dance Dance Revolution that is!! Let your passion take you as we host the city's largest dance-off! For the next 3 days, challenge yourself to greater heights and get the highest score! The top 32 will have a grand slam face-off on February 8th, 2023 for the title of Ultimate Dance Champion and a $10,000 grand prize!"
+    },
+    {
+      "id": 3,
+      "name": "Drinking & Dragons",
+      "image": "images/drinkDrag.jpg",
+      "alt": "Dragon drinking fine wine",
+      "headline": "Great food, fine wine, and the best Dungeons & Dragons around!",
+      "date": "March 14th, 2023",
+      "summary": "What better way to celebrate national Pi day than with pie...and D&D! That's right, it's time to crack out the ol' figuines and dust off those dice! For today and today only, we are hosting unique, never-before-played D&D modules hosted by professional DMs! But that's not all, we are also introducing 3 new types of pies and 20 different types of wine for players to enjoy as they play. So come on by!"
+    },
+    {
+      "id": 4,
+      "name": "Race Tournament",
+      "image": "images/games/race.jpg",
+      "alt": "Racing tournament image",
+      "headline": "Put the pedal to the metal and prove yourself to be the very best!",
+      "date": "April 1st, 2023",
+      "summary": "This is no April Fool's Joke! We are hosting an all-around race tournament. For the next week, we will be competing on every racing machine, 1 game per day. The cusotmer with the highest score will have their portrait placed on the Hall of Flame and receive the mystery grand prize of the day, guaranteed to blow your socks off! Race! Compete! Win! Whether for glory, for honor, for riches, or some other crazy reason, come on down and show your skills!"
+    },
+    {
+      "id": 5,
+      "name": "Rockin' it Retro Style",
+      "image": "images/retro.jpg",
+      "alt": "Retro image of car in digital universe",
+      "headline": "Retro Arcade Tournament Extraordinaire!!! Let's get to playing!",
+      "date": "April 15th, 2023",
+      "summary": "It's a tournament of the best of the best, the ultimate retro arcde game experience. Face off against you competitors in this high stakes competition to find the one person who can prove that the oldies never go out of style! More details to come!"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "D&D Room",
+      "image": "images/dndroom.jpg",
+      "content": "A private room for your D&D escapades, what more needs explaining! With 5 rooms available and a max capacity of 10 people each, why hesitate? Get your room now, cuz you deserve it! For more details, click below.",
+      "price": "$5 per hour, max 8 hours",
+      "maxSize": 10
+    },
+    {
+      "id": 2,
+      "name": "Karaoke Room",
+      "image": "images/karaoke.jpg",
+      "content": "With 4 different karaoke rooms, each having enough capacity for parties of up to 20, it's a guaranteed great time for all ages! You can pick from thousands of popular songs, adjust the lighting to set your stage, and compete to see who can score the highest with out Karaoke Dream 3000. Click below for more details!",
+      "price": "$35 per hour",
+      "maxSize": 20
+    },
+    {
+      "id": 3,
+      "name": "VR Sandbox",
+      "image": "images/vrsandbox.jpg",
+      "content": "Three rooms with built-in VR support technologies and enough room for up to 8 people. Take on the forces of Mordor with sword and magic, repulse the zombie hoard with modern weaponry, have a glorious duel with the siths (or the jedi, we don't judge). With over 20 scenarios to choose from, we guarantee you'll never get bored! Click below for more details!",
+      "price": "$30 per person",
+      "maxSize": 8
+    }
+  ],
+  "store": [
+    {
+      "id": 1,
+      "name": "Drinking & Dragons Tee",
+      "price": "$15.00",
+      "image": "images/drinkDrag.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Gamer Cafe Tee",
+      "price": "$12.00",
+      "image": "images/gamerlogo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dance Dance X-Treme Tee",
+      "price": "$14.00",
+      "image": "images/dance.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Retro Pac-Man Tee",
+      "price": "$10.00",
+      "image": "images/games/pacman.jpg"
+    }
+  ]
+}
