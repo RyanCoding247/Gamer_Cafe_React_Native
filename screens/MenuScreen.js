@@ -13,7 +13,6 @@ const MenuScreen = () => {
     return (
         <ImageBackground source={MenuBackground} resizeMode="cover" style={styles.image}>
             <MenuDisplay />
-
         </ImageBackground>
     )
 };

@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Dimensions, Image, Button } from "react-native";
-import { baseUrl } from "../../shared/baseUrl";
+import { baseImageUrl } from "../../shared/baseUrl";
 
 //Note: carousel code utilized comes from "https://blog.logrocket.com/implement-react-native-snap-carousel/"
 
@@ -10,7 +10,7 @@ const EventsCarousel = ({ item, index, navigation }) => {
     return (
         <View style={styles.container} key={index}>
             <Image
-                source={{ uri: baseUrl + item.image }}
+                source={{ uri: baseImageUrl + item.image }}
                 style={styles.image}
             />
             <Text style={styles.header}>{item.name}</Text>

@@ -1,10 +1,10 @@
 import { View, StyleSheet, ImageBackground, Text } from "react-native";
 import CarouselCards from "../features/events/CarouselCards";
-import { baseUrl } from "../shared/baseUrl";
+import { baseImageUrl } from "../shared/baseUrl";
 
 const EventsScreen = ({navigation}) => {
     return (
-        <ImageBackground source={{ uri: baseUrl + 'images/eventsbg.jpg' }} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={{ uri: baseImageUrl + 'backgrounds/eventsbg.jpg' }} resizeMode="cover" style={styles.image}>
             <View style={styles.container}>
                 <Text style={styles.title}>Upcoming Events</Text>
                 <CarouselCards navigation={navigation} />

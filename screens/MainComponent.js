@@ -18,7 +18,9 @@ import { fetchStore } from "../features/store/storeSlice";
 import { fetchRooms } from "../features/rooms/roomsSlice";
 import EventInfoScreen from "../features/events/EventInfoScreen";
 import RoomInfoScreen from "../features/rooms/RoomInfoScreen";
-import { baseUrl } from "../shared/baseUrl";
+import { baseImageUrl } from "../shared/baseUrl";
+import { LoginPage } from "../features/user/LoginPage";
+import { RegisterPage } from "../features/user/RegisterPage";
 
 
 const Drawer = createDrawerNavigator();
@@ -30,6 +32,7 @@ const screenOptions = {
 
 const HomeNavigator = () => {
     const Stack = createStackNavigator();
+    const user = useSelector(state => state.user.username);
     return (
         <Stack.Navigator
             initialRouteName="Home"
@@ -42,12 +45,30 @@ const HomeNavigator = () => {
                     title: 'Home',
                     headerLeft: () => (
                         <Avatar
-                            title='home'
-                            source={{ uri: baseUrl + 'images/gamerlogo.jpeg' }}
+                            title={user}
+                            source={{ uri: baseImageUrl + 'gamerlogo.jpeg' }}
                             rounded
                             onPress={() => navigation.toggleDrawer()}
                         />
-                    )
+                    ),
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
                 })}
             />
         </Stack.Navigator>
@@ -55,6 +76,7 @@ const HomeNavigator = () => {
 }
 
 const MenuNavigator = () => {
+    const user = useSelector(state => state.user.username);
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
@@ -71,12 +93,117 @@ const MenuNavigator = () => {
                             onPress={() => navigation.toggleDrawer()}
                         />
                     )
+                    ,
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
                 })}
             />
         </Stack.Navigator>
     )
 }
+
+const LoginNavigator = () => {
+    const user = useSelector(state => state.user.username);
+    const Stack = createStackNavigator();
+    return (
+        <Stack.Navigator
+            screenOptions={screenOptions}>
+            <Stack.Screen
+                name={user ? 'Logout' : 'Login'}
+                component={LoginPage}
+                options={({ navigation }) => ({
+                    headerLeft: () => (
+                        <Icon
+                            name='user'
+                            type='font-awesome'
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+                    ),
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
+                })}
+            />
+        </Stack.Navigator>
+    )
+}
+
+const RegisterNavigator = () => {
+    const user = useSelector(state => state.user.username);
+    const Stack = createStackNavigator();
+    return (
+        <Stack.Navigator
+            screenOptions={screenOptions}>
+            <Stack.Screen
+                name='Register'
+                component={RegisterPage}
+                options={({ navigation }) => ({
+                    headerLeft: () => (
+                        <Icon
+                            name='user'
+                            type='font-awesome'
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+                    ),
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
+                })}
+            />
+        </Stack.Navigator>
+    )
+}
+
 const GamesNavigator = () => {
+    const user = useSelector(state => state.user.username);
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
@@ -92,7 +219,25 @@ const GamesNavigator = () => {
                             iconStyle={styles.stackIcon}
                             onPress={() => navigation.toggleDrawer()}
                         />
-                    )
+                    ),
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
                 })}
             />
         </Stack.Navigator>
@@ -101,6 +246,7 @@ const GamesNavigator = () => {
 
 const RoomsNavigator = () => {
 
+    const user = useSelector(state => state.user.username);
     const Stack = createStackNavigator();
     const rooms = useSelector((state) => state.rooms.roomsArray)
 
@@ -118,7 +264,25 @@ const RoomsNavigator = () => {
                             iconStyle={styles.stackIcon}
                             onPress={() => navigation.toggleDrawer()}
                         />
-                    )
+                    ),
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
                 })}
             />
             {rooms.map((item, idx) => {
@@ -163,6 +327,7 @@ const EventsNavigator = () => {
 
     const events = useSelector((state) => state.events);
 
+    const user = useSelector(state => state.user.username);
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
@@ -179,7 +344,25 @@ const EventsNavigator = () => {
                             iconStyle={styles.stackIcon}
                             onPress={() => navigation.toggleDrawer()}
                         />
-                    )
+                    ),
+                    headerRight: () => {
+                        if (user) {
+                            return (
+                                <Avatar
+                                    title={`User: ${user}`}
+                                    onPress={() => console.log('hi')}
+                                    containerStyle={{ width: 200 }}
+                                />
+                            )
+                        } else {
+                            return (
+                                <Avatar
+                                    source={{ uri: baseImageUrl + 'profile.png' }}
+                                    onPress={() => navigation.navigate('Login')}
+                                />
+                            )
+                        }
+                    }
                 })}
             />
             {events.eventsArray.map((item, idx) => {
@@ -198,12 +381,11 @@ const EventsNavigator = () => {
     )
 }
 
-
-
-
 const Main = () => {
 
     const dispatch = useDispatch();
+    const user = useSelector(state => state.user.username);
+
 
     useEffect(() => {
         dispatch(fetchMenu());
@@ -321,9 +503,33 @@ const Main = () => {
                         )
                     }}
                 /> */}
+                <Drawer.Screen
+                    name='Login'
+                    component={LoginNavigator}
+                    options={{
+                        title: user ? 'Logout' : 'Login',
+                        drawerIcon: ({ color }) => (
+                            <Icon
+                                name={user ? 'share-square' : 'user'}
+                                type='font-awesome'
+                                size={24}
+                                iconStyle={{ width: 30 }}
+                                color={color}
+                            />
+                        )
+                    }}
+                />
+                <Drawer.Screen
+                    name='Register'
+                    component={RegisterNavigator}
+                    options={{
+                        drawerLabel: () => null,
+                        title: null,
+                        drawerIcon: () => null
+                    }}
+                />
             </Drawer.Navigator>
         </View>
-
     )
 };
 

@@ -11,11 +11,11 @@ import Main from './screens/MainComponent';
 export default function App() {
   return (
     <Provider store={store}>
-      <PersistGate loading={<Loading />} persistor={persistor}>
+      {/* <PersistGate loading={<Loading />} persistor={persistor}> */}
         <NavigationContainer>
           <Main />
         </NavigationContainer>
-      </PersistGate>
+      {/* </PersistGate> */}
     </Provider>
 
   );

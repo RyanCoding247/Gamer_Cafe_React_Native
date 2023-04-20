@@ -1,29 +1,26 @@
-import { View, Text, StyleSheet, TouchableHighlight, FlatList, ImageBackground, Button } from "react-native"
-import { Image, Card, ListItem } from "react-native-elements";
-import HomeGame from '../assets/img/homegame.jpg'
-import Background from '../assets/img/background.jpg'
-import DnD from '../assets/img/dnd.jpg'
-import Dining from '../assets/img/restaurant.jpg'
+import { View, Text, StyleSheet, TouchableHighlight, FlatList, ImageBackground } from "react-native"
+import { Image } from "react-native-elements";
 import GamerTitle from "../components/Header";
+import { baseImageUrl } from "../shared/baseUrl";
 
 
 const data = [
     {
         id: 1,
         text: 'More games than you can possibly count',
-        image: `${HomeGame}`,
+        image: baseImageUrl + 'homegame.jpg',
         site: `Games`
     },
     {
         id: 2,
         text: 'A classic dining experience well worth the trip',
-        image: `${Dining}`,
+        image: baseImageUrl + 'restaurant.jpg',
         site: 'Menu'
     },
     {
         id: 3,
         text: "Events and tournaments hosted every month. You won't want to miss it",
-        image: `${DnD}`,
+        image: baseImageUrl + 'dnd.jpg',
         site: 'Events'
     }
 ]
@@ -31,7 +28,7 @@ const data = [
 const HomeScreen = ({ navigation }) => {
 
     return (
-        <ImageBackground source={Background} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={{ uri: baseImageUrl + 'backgrounds/background.jpg' }} resizeMode="cover" style={styles.image}>
             <View>
                 <GamerTitle />
                 <FlatList
@@ -43,7 +40,7 @@ const HomeScreen = ({ navigation }) => {
                             onPress={() => navigation.navigate(`${item.site}`)}
                         >
                             <Image
-                                source={item.image}
+                                source={{ uri: item.image}}
                                 style={{
                                     width: 150,
                                     height: 150,

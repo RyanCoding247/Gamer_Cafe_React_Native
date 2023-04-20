@@ -1,7 +1,7 @@
 import { ImageBackground } from "react-native";
 import { Text, View, TextInput, StyleSheet, ScrollView, Modal } from "react-native";
 import { Button, Card, Input, ListItem } from "react-native-elements";
-import { baseUrl } from "../../shared/baseUrl";
+import { baseImageUrl } from "../../shared/baseUrl";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Formik } from "formik";
@@ -36,12 +36,11 @@ const RoomInfoScreen = ({ route }) => {
 
     const endTimes = [{ time: "11 AM" }, { time: "12 PM" }, { time: "1 PM" }, { time: "2 PM" }, { time: "3 PM" }, { time: "4 PM" }, { time: "5 PM" }, { time: "6 PM" }, { time: "7 PM" }, { time: "8 PM" }, { time: "9 PM" }, { time: "10 PM" }, { time: "11 PM" }, { time: "12 AM" }]
 
-    //currently no back-end to send user info to
 
     return (
         <View>
             <ImageBackground
-                source={{ uri: baseUrl + 'images/roomsbg.JPEG' }}
+                source={{ uri: baseImageUrl + 'backgrounds/roomsbg.JPEG' }}
                 resizeMode="cover"
                 style={{ height: '100%' }}
             >
@@ -53,7 +52,7 @@ const RoomInfoScreen = ({ route }) => {
                             style={{ fontSize: 24 }}
                         >{item.name}</Card.Title>
                         <Card.Image
-                            source={{ uri: baseUrl + item.image }}
+                            source={{ uri: baseImageUrl + item.image }}
                             style={styles.image}
                         />
                         <Text style={styles.text} >{item.content}</Text>

@@ -1,5 +1,5 @@
 import { View, Text, ImageBackground, ScrollView } from "react-native";
-import { baseUrl } from "../shared/baseUrl";
+import { baseImageUrl } from "../shared/baseUrl";
 import { useSelector } from "react-redux";
 import { Button, Card } from "react-native-elements";
 
@@ -9,7 +9,7 @@ const RoomsScreen = ({ navigation }) => {
 
     return (
         <View>
-            <ImageBackground source={{ uri: baseUrl + 'images/roomsbg.JPEG' }} resizeMode="stretch" style={{ height: "100%" }}>
+            <ImageBackground source={{ uri: baseImageUrl + 'backgrounds/roomsbg.JPEG' }} resizeMode="stretch" style={{ height: "100%" }}>
                 <ScrollView>
                     {rooms.map((item, idx) => (
                         <Card
@@ -18,7 +18,7 @@ const RoomsScreen = ({ navigation }) => {
                         >
                             <Card.Title style={{color: 'black', fontSize: 24}}>{item.name}</Card.Title>
                             <Card.Image
-                                source={{ uri: baseUrl + item.image }}
+                                source={{ uri: baseImageUrl + item.image }}
                             />
                             <Button title='Reserve' containerStyle={{marginTop: 10 }} buttonStyle={{backgroundColor: 'red'}}
                             onPress={() => navigation.navigate(`${item.name}`, { item })}
