@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../shared/baseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
-import { useDispatch } from 'react-redux';
 
 export const userSignup = createAsyncThunk(
     'user/signup',
@@ -28,7 +27,7 @@ export const userSignup = createAsyncThunk(
                 );
             }, 2000)
             setTimeout(() => {
-                Alert.alert('Attempting to Log In Now...')
+                Alert.alert('You can close this now!')
                 dispatch(userLogin({ username, password })) 
             }, 3500);
         }
